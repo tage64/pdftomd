@@ -1,0 +1,34 @@
+[project]
+name = "pdftomd"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pymupdf-layout>=1.26.6",
+    "pymupdf4llm>=0.2.9",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.format]
+docstring-code-format = true
+preview = true
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle
+    "F",  # pyflakes
+    "UP",  # pyupgrade
+    "B",  # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff
+    "I",  # isort
+    "D",  # pydocstyle
+]
+ignore = ["D1", "D2", "D401"]
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
