@@ -1,13 +1,17 @@
 [project]
 name = "pdftomd"
 version = "0.1.0"
-description = "Add your description here"
+authors = [ { name = "Tage Johansson" } ]
+description = "Convert Pdf files to Markdown"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "pymupdf-layout>=1.26.6",
     "pymupdf4llm>=0.2.9",
 ]
+
+[project.scripts]
+pdftomd = "main:main"
 
 [tool.ruff]
 line-length = 100
