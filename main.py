@@ -1,13 +1,10 @@
 import argparse
 from pathlib import Path
 
-import pymupdf.layout
+import pymupdf4llm
 
 
 def pdftomd(pdf_file: Path, md_file: Path):
-    pymupdf.layout.activate()
-    import pymupdf4llm
-
     md_text = pymupdf4llm.to_markdown(pdf_file)  # get markdown for all pages
     md_file.write_bytes(md_text.encode(encoding="utf-8", errors="replace"))
 
